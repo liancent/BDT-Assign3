@@ -20,10 +20,10 @@ class RetrieveApi():
         response = requests.get(url, headers=headers, params=querystring)
         self.json_parser.export_json_data(response, 'movie_output.json')
 
-    def car_api_getter(self):
+    def car_mileage_api_getter(self):
         url = "https://car-api2.p.rapidapi.com/api/mileages"
 
-        querystring = {"direction":"asc","verbose":"yes","sort":"id"}
+        querystring = {"direction":"asc","verbose":"yes","sort":"id", "page": "3"}
 
         headers = {
             "X-RapidAPI-Key": self.config["rapid-api-key"]["x-rapid-api-key"],
@@ -31,13 +31,13 @@ class RetrieveApi():
         }
 
         response = requests.get(url, headers=headers, params=querystring)
-        self.json_parser.export_json_data(response, 'car_output.json')
+        self.json_parser.export_json_data(response, 'car_output3.json')
 
 
 def main():
     retrieve_api = RetrieveApi()
-    #retrieve_api.car_api_getter()
-    retrieve_api.movie_api_getter()
+    retrieve_api.car_mileage_api_getter()
+    # retrieve_api.movie_api_getter()
 
 if __name__ == '__main__':    
     main()

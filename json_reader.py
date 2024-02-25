@@ -10,3 +10,5 @@ class JsonReader():
         """
         with open(file_output, 'w', encoding='utf-8') as output:
             json.dump(json_input.json(), output, indent=4, sort_keys=True)
+
+    # def retrieve_
