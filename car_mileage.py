@@ -19,7 +19,7 @@ def average_mileage():
                 'combined mpg': entry['combined_mpg']
             }
 
-            r.json().set('car_data:' + str(counter), '$', r_json_data)
+            r.json().set('car_data:' + str(counter), '.', r_json_data)
 
             counter += 1
 
