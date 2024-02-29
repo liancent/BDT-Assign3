@@ -16,5 +16,5 @@ class RedisInserter():
             key: The key that the data is to be stored under
             data: The data to be inserted into the Redis Database
         """
-
+        
         self.redis.json().set(key, '.', json.dumps(data))
