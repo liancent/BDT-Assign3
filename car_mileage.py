@@ -2,8 +2,9 @@ import json
 from configuration import get_redis_connection
 from redis.commands.json.path import Path
 
+r = get_redis_connection()
+
 def average_mileage():
-    r = get_redis_connection()
 
     with open('car_output.json', 'r', encoding='utf-8') as car_data:
         data = json.load(car_data)
@@ -23,8 +24,6 @@ def average_mileage():
             counter += 1
 
 def retrieve_data():
-    r = get_redis_connection()
-
     data = r.json().get("car_data:1")
     print(data)
 
