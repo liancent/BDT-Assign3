@@ -3,6 +3,9 @@ from redis.commands.json.path import Path
 import json
 
 class RedisInserter():
+    """
+    This class is used to insert data into Redis
+    """
     redis = get_redis_connection()
 
     def __init__(self) -> None:
@@ -16,7 +19,6 @@ class RedisInserter():
             key: The key that the data is to be stored under
             data: The data to be inserted into the Redis Database
         """
-
         counter = 0
 
         for entry in data['data']:
