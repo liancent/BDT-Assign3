@@ -19,6 +19,12 @@ class DataVisualization():
     def create_msrp_vs_combined_mpg_graph(self):
         """
         Create a matplotlib graph with X = msrp and Y = combined mpg
+
+        Params:
+            None
+
+        Returns: 
+            Image of scatterplot graph
         """
         msrp = []
         combined_mpg = []
