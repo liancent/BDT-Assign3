@@ -28,7 +28,7 @@ class RedisInserter():
                 'year': entry['make_model_trim']['year'],
                 'city_mpg': entry['epa_city_mpg'],
                 'hwy_mpg': entry['epa_highway_mpg'],
-                'combined mpg': entry['combined_mpg']
+                'combined_mpg': entry['combined_mpg']
             }
 
             self.redis.json().set(key + ':' + str(counter), '.', r_json_data)

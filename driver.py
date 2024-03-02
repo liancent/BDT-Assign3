@@ -1,13 +1,11 @@
 from configuration import get_redis_connection
 import redis_inserter
-import json_reader
 import api_getter
 import create_graphs
 
 def main():
     api_requestor = api_getter.RetrieveApi()
     inserter = redis_inserter.RedisInserter()
-    json_data_reader = json_reader.JsonReader()
     data_visualizer = create_graphs.DataVisualization()
 
     data = api_requestor.get_data_from_api()

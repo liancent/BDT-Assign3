@@ -38,6 +38,3 @@ class DataVisualization():
         plt.title("Comparison between MSRP and Combined MPG")
         plt.scatter(msrp, combined_mpg)
         plt.show()
-
-ex = DataVisualization()
-ex.create_msrp_vs_combined_mpg_graph()
