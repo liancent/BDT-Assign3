@@ -16,5 +16,18 @@ class RedisInserter():
             key: The key that the data is to be stored under
             data: The data to be inserted into the Redis Database
         """
-        
-        self.redis.json().set(key, '.', json.dumps(data))
+
+        counter = 0
+
+        for entry in data['data']:
+            r_json_data = {
+                'make': entry['make_model_trim']['make_model']['make']['name'],
+                'msrp': entry['make_model_trim']['msrp'],
+                'year': entry['make_model_trim']['year'],
+                'city mpg': entry['epa_city_mpg'],
+                'hwy mpg': entry['epa_highway_mpg'],
+                'combined mpg': entry['combined_mpg']
+            }
+
+            self.redis.json().set(key + ':' + str(counter), '.', r_json_data)
+            counter += 1
