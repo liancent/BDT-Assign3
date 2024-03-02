@@ -1,3 +1,6 @@
 config.yaml
 *.json
 __pycache__/
+
+json_reader.py
+car_mileage.py

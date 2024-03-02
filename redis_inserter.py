@@ -6,9 +6,14 @@ class RedisInserter():
     """
     This class is used to insert data into Redis
     """
+    
+    # Class Variables
     redis = get_redis_connection()
-
+    
     def __init__(self) -> None:
+        """
+        Class Constructor
+        """
         pass
 
     def insert_new_data(self, key, data):

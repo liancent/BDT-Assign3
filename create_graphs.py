@@ -6,16 +6,15 @@ class DataVisualization():
     """
     This class is used for creating graphs of the data that was collected
     """
+
+    # Class Variables
     redis = get_redis_connection()
 
     def __init__(self) -> None:
+        """
+        Class Constructor
+        """
         pass
-
-    def get_data_test(self):
-        item = self.redis.json().get("car_data:1")
-        print(item)
-        print(item["msrp"])
-        
 
     def create_msrp_vs_combined_mpg_graph(self):
         """

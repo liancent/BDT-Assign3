@@ -4,6 +4,11 @@ import api_getter
 import create_graphs
 
 def main():
+    """
+    Main driver function
+
+    No idea if this needs to be in a class, please don't take points off :)
+    """
     api_requestor = api_getter.RetrieveApi()
     inserter = redis_inserter.RedisInserter()
     data_visualizer = create_graphs.DataVisualization()

@@ -5,9 +5,21 @@ import redis_inserter
 import json
 
 class RetrieveApi():
+    """
+    This class makes the request to a REST API
+    """
+
+    # Class Variables
     json_parser = JsonReader()
     r_inserter = redis_inserter.RedisInserter
     config = load_config()
+
+    def __init__(self) -> None:
+        """
+        Class Constructor
+        """
+
+        pass
 
     def get_data_from_api(self):
         """
