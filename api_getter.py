@@ -10,6 +10,13 @@ class RetrieveApi():
     config = load_config()
 
     def get_data_from_api(self):
+        """
+        This method makes a call to a REST API gets the response
+
+        Returns:
+            REST API response in the form of a JSON
+
+        """
         url = "https://car-api2.p.rapidapi.com/api/mileages"
 
         querystring = {"direction":"asc","verbose":"yes","sort":"id", "page": "1"}

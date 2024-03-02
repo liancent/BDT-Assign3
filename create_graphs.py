@@ -29,7 +29,7 @@ class DataVisualization():
         
         while redis_data:
             msrp.append(redis_data["msrp"])
-            combined_mpg.append(redis_data["combined mpg"])
+            combined_mpg.append(redis_data["combined_mpg"])
             iter += 1
             redis_data = self.redis.json().get("car_data:" + str(iter))
 

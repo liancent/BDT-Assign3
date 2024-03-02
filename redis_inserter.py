@@ -26,8 +26,8 @@ class RedisInserter():
                 'make': entry['make_model_trim']['make_model']['make']['name'],
                 'msrp': entry['make_model_trim']['msrp'],
                 'year': entry['make_model_trim']['year'],
-                'city mpg': entry['epa_city_mpg'],
-                'hwy mpg': entry['epa_highway_mpg'],
+                'city_mpg': entry['epa_city_mpg'],
+                'hwy_mpg': entry['epa_highway_mpg'],
                 'combined mpg': entry['combined_mpg']
             }
 
